@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "6856148575",
+    "project_id": "cookpedia-9df5f",
+    "storage_bucket": "cookpedia-9df5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6856148575:android:df1a5c7ac5c89d21b57dea",
+        "android_client_info": {
+          "package_name": "com.mostapha.cookpedia.cookpedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6856148575-e7efcv5edtnkof6bahose7b7ajokr5sn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mostapha.cookpedia.cookpedia",
+            "certificate_hash": "cb42b242864a1b2bebb01c179be2d0e672e203bf"
+          }
+        },
+        {
+          "client_id": "6856148575-3t6udd0258etfi8btd9kj4a8l0tmbot9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAvg1FOAwvvN_Bqj5nhEmMyPe3r0LIlhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6856148575-3t6udd0258etfi8btd9kj4a8l0tmbot9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
