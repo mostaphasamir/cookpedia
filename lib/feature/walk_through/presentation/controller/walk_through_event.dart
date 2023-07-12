@@ -7,7 +7,8 @@ abstract class WalkThroughEvent extends Equatable {
 }
 class InitialEvent extends WalkThroughEvent {}
 
-class LoginWithGoogleEvent extends WalkThroughEvent {
+class LoginWithGoogleEvent extends WalkThroughEvent {}
 
+class GoToGetStartedEvent extends WalkThroughEvent {}
 
-}
+class GetCountryDataEvent extends WalkThroughEvent {}

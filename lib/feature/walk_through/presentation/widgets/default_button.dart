@@ -1,3 +1,4 @@
+import 'package:cookpedia/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_sizer/app_height.dart';
@@ -5,10 +6,10 @@ import '../../../../core/utils/app_sizer/app_width.dart';
 
 class DefaultButton extends StatelessWidget {
   final void Function()? onTap;
-  final Color color;
+  final Color ? color;
   final Widget? child;
 
-  const DefaultButton({Key? key, required this.color, this.child, this.onTap}) : super(key: key);
+  const DefaultButton({Key? key, this.color, this.child, this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class DefaultButton extends StatelessWidget {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
-          color: color,
+          color: color??AppColor.primaryColor,
         ),
         child: child,
       ),

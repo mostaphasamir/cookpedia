@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../../config/routes/app_routes.dart';
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/app_string.dart';
 import '../widgets/default_button.dart';
@@ -83,6 +84,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
               DefaultButton(
+                  onTap: () => Navigator.pushNamed(context,Routes.selectCountryScreen),
                 color: AppColor.primaryColor,
                 child: Text(
                   AppStrings.getStarted,

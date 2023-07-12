@@ -1,11 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-abstract class BaseAuthRemoteDataSource {
+abstract class BaseWalkthroughRemoteDataSource {
   loginWithGoogle();
 }
 
-class AuthRemoteDataSource extends BaseAuthRemoteDataSource {
+class WalkthroughRemoteDataSource extends BaseWalkthroughRemoteDataSource {
 
 
   @override

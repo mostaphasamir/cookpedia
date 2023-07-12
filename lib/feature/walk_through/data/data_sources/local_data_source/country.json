@@ -1,0 +1,162 @@
+[
+    {
+      "code": "AF",
+      "name": "Afghanistan",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Afghanistan.svg"
+    },
+    {
+      "code": "AX",
+      "name": "Åland Islands",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/5/52/Flag_of_%C3%85land_%28Finland%29.svg"
+    },
+    {
+      "code": "AL",
+      "name": "Albania",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg"
+    },
+    {
+      "code": "DZ",
+      "name": "Algeria",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg"
+    },
+    {
+      "code": "AS",
+      "name": "American Samoa",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/8/87/Flag_of_American_Samoa.svg"
+    },
+    {
+      "code": "AD",
+      "name": "Andorra",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Andorra.svg"
+    },
+    {
+      "code": "AO",
+      "name": "Angola",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Angola.svg"
+    },
+    {
+      "code": "AI",
+      "name": "Anguilla",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Anguilla.svg"
+    },
+    {
+      "code": "AQ",
+      "name": "Antarctica",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/6/68/Flag_of_the_Antarctic_Treaty.svg"
+    },
+    {
+      "code": "AG",
+      "name": "Antigua and Barbuda",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Antigua_and_Barbuda.svg"
+    },
+    {
+      "code": "AR",
+      "name": "Argentina",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg"
+    },
+    {
+      "code": "AM",
+      "name": "Armenia",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg"
+    },
+    {
+      "code": "AW",
+      "name": "Aruba",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Aruba.svg"
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg"
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg"
+    },
+    {
+      "code": "AZ",
+      "name": "Azerbaijan",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg"
+    },
+    {
+      "code": "BS",
+      "name": "Bahamas",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Flag_of_the_Bahamas.svg"
+    },
+    {
+      "code": "BH",
+      "name": "Bahrain",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg"
+    },
+    {
+      "code": "BD",
+      "name": "Bangladesh",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg"
+    },
+    {
+      "code": "BB",
+      "name": "Barbados",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Barbados.svg"
+    },
+    {
+      "code": "BY",
+      "name": "Belarus",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Belarus.svg"
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg"
+    },
+    {
+      "code": "BZ",
+      "name": "Belize",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Flag_of_Belize.svg"
+    },
+    {
+      "code": "BJ",
+      "name": "Benin",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Benin.svg"
+    },
+    {
+      "code": "BM",
+      "name": "Bermuda",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bermuda.svg"
+    },
+    {
+      "code": "BT",
+      "name": "Bhutan",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Bhutan.svg"
+    },
+    {
+      "code": "BO",
+      "name": "Bolivia (Plurinational State of)",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Bolivia_%28state%29.svg"
+    },
+    {
+      "code": "BQ",
+      "name": "Bonaire, Sint Eustatius and Saba",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg"
+    },
+    {
+      "code": "BA",
+      "name": "Bosnia and Herzegovina",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg"
+    },
+    {
+      "code": "BW",
+      "name": "Botswana",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_Botswana.svg"
+    },
+    {
+      "code": "BV",
+      "name": "Bouvet Island",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg"
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
+    }
+]

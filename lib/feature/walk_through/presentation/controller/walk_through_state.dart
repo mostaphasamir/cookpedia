@@ -15,3 +15,13 @@ class WalkThroughInitial extends WalkThroughState {
 class LoginWithGoogleSuccessState extends WalkThroughState {}
 
 class LoginWithGoogleErrorState extends WalkThroughState {}
+
+class LoadingCountryState extends WalkThroughState {}
+
+class LoadedCountryState extends WalkThroughState {
+  final List<CountryModel> countries ;
+
+  const LoadedCountryState(this.countries);
+}
+
+class ErrorCountryState extends WalkThroughState {}
