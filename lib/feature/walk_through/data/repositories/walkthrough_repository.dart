@@ -23,5 +23,10 @@ class WalkthroughRepository extends BaseWalkthroughRepository {
     return await baseWalkthroughLocalDataSource.getAllCountry();
   }
 
+  @override
+  Future<List<Country>> searchCountryName(String countryName) async{
+    return await baseWalkthroughLocalDataSource.searchCountryName(countryName);
+  }
+
 
 }

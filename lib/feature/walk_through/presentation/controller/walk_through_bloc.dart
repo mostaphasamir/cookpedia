@@ -9,6 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../data/models/country_model.dart';
 import '../../domain/use_cases/get_all_country.dart';
 import '../../domain/use_cases/login_with_google_usecase.dart';
+import '../../domain/use_cases/search_country_usecase.dart';
 
 
 part 'walk_through_event.dart';
@@ -17,12 +18,13 @@ part 'walk_through_state.dart';
 class WalkThroughBloc extends Bloc<WalkThroughEvent, WalkThroughState> {
   final LoginWithGoogleUseCase loginWithGoogleUseCase ;
   final GetAllCountryUseCase getAllCountryUseCase ;
-  WalkThroughBloc(this.loginWithGoogleUseCase,this.getAllCountryUseCase) : super(WalkThroughInitial()) {
+  final SearchCountryUseCase searchCountryUseCase ;
+  WalkThroughBloc(this.loginWithGoogleUseCase,this.getAllCountryUseCase, this.searchCountryUseCase) : super(WalkThroughInitial()) {
     on<LoginWithGoogleEvent>(loginWithGoogleEvent);
     on<GoToGetStartedEvent>(goToGetStartedEvent);
     on<GetCountryDataEvent>(getCountryDataEvent);
+    on<SearchCountryEvent>(searchCountryEvent);
   }
-
   Future<FutureOr<void>> loginWithGoogleEvent(LoginWithGoogleEvent event, Emitter<WalkThroughState> emit) async {
     final UserCredential user =await loginWithGoogleUseCase();
     if (kDebugMode) {
@@ -36,6 +38,13 @@ class WalkThroughBloc extends Bloc<WalkThroughEvent, WalkThroughState> {
   FutureOr<void> getCountryDataEvent(GetCountryDataEvent event, Emitter<WalkThroughState> emit) async{
     emit(LoadingCountryState());
     final List<Country> result = await getAllCountryUseCase();
-    emit(LoadedCountryState(result as List<CountryModel>));
+    emit(LoadedCountryState(countries: result as List<CountryModel>));
   }
+
+  FutureOr<void> searchCountryEvent(SearchCountryEvent event, Emitter<WalkThroughState> emit)async {
+    emit(LoadingCountryState());
+    final List<Country> filterList = await searchCountryUseCase(event.country);
+    emit(LoadedCountryState(countries:  filterList as List<CountryModel>));
+  }
+
 }

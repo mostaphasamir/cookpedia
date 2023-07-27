@@ -1,6 +1,4 @@
-import 'package:cookpedia/feature/walk_through/data/models/country_model.dart';
 import 'package:cookpedia/feature/walk_through/domain/entities/country.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -12,15 +10,15 @@ Widget countryWidget({required Country country}) => Container(
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.grey.shade300),
+        border: Border.all(color:Colors.grey.shade300),
       ),
       margin: EdgeInsets.only(bottom: AppHeight.h2),
       child: Row(
         children: [
           SizedBox(
             width: AppWidth.w6,
-          ),
-          Icon(Icons.flag),
+          ), 
+          const Icon(Icons.flag),
           // Image(
           //   image: NetworkImage(
           //     country.flagURL,

@@ -13,7 +13,7 @@ ThemeData appLightTheme() {
           fontSize: 24.sp, height: 1.1.sp, fontWeight: FontWeight.w500),
       titleMedium: TextStyle(
         fontSize: 14.sp,
-        color: Colors.white,
+        color: Colors.black,
         height: 1.5.sp,
       ),
       bodyMedium: TextStyle(

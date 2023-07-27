@@ -51,7 +51,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
               Text(
                 AppStrings.intro,
-                style: Theme.of(context).textTheme.titleMedium,
+                style: Theme.of(context).textTheme.titleMedium!.copyWith(color:Colors.white),
                 textAlign: TextAlign.center,
               ),
               SizedBox(
@@ -65,6 +65,8 @@ class WelcomeScreen extends StatelessWidget {
                 onTap: (){
                   sl<WalkThroughBloc>().add(LoginWithGoogleEvent());
                 },
+                marginHorizontal: AppWidth.w10,
+
                 color: Colors.white,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -86,6 +88,7 @@ class WelcomeScreen extends StatelessWidget {
               DefaultButton(
                   onTap: () => Navigator.pushNamed(context,Routes.selectCountryScreen),
                 color: AppColor.primaryColor,
+                marginHorizontal: AppWidth.w10,
                 child: Text(
                   AppStrings.getStarted,
                   style: Theme.of(context)
@@ -96,6 +99,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
               DefaultButton(
                 color: Colors.white,
+                marginHorizontal: AppWidth.w10,
                 child: Text(
                   AppStrings.iAlreadyHaveAnAccount,
                   style: Theme.of(context)

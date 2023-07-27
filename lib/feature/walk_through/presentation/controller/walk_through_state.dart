@@ -19,9 +19,17 @@ class LoginWithGoogleErrorState extends WalkThroughState {}
 class LoadingCountryState extends WalkThroughState {}
 
 class LoadedCountryState extends WalkThroughState {
-  final List<CountryModel> countries ;
+  final List<CountryModel> countries;
 
-  const LoadedCountryState(this.countries);
+  const LoadedCountryState({
+    required this.countries,
+  });
 }
 
 class ErrorCountryState extends WalkThroughState {}
+
+class SearchByCountryListState extends WalkThroughState {
+  final List<CountryModel> countries;
+
+  const SearchByCountryListState({required this.countries});
+}

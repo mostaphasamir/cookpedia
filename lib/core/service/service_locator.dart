@@ -7,6 +7,7 @@ import '../../feature/walk_through/data/data_sources/local_data_source/walkthrou
 import '../../feature/walk_through/data/repositories/walkthrough_repository.dart';
 import '../../feature/walk_through/domain/use_cases/get_all_country.dart';
 import '../../feature/walk_through/domain/use_cases/login_with_google_usecase.dart';
+import '../../feature/walk_through/domain/use_cases/search_country_usecase.dart';
 
 final sl = GetIt.instance;
 
@@ -15,11 +16,12 @@ class ServiceLocator{
   void init(){
 
     ///bloc
-    sl.registerFactory(() => WalkThroughBloc(sl(),sl()));
+    sl.registerFactory(() => WalkThroughBloc(sl(),sl(),sl()));
 
     ///useCase
     sl.registerLazySingleton(() => LoginWithGoogleUseCase(baseWalkthroughRepository: sl()));
     sl.registerLazySingleton(() => GetAllCountryUseCase(baseWalkthroughRepository: sl()));
+    sl.registerLazySingleton(() => SearchCountryUseCase(baseWalkthroughRepository: sl()));
 
     ///repo
     sl.registerLazySingleton<BaseWalkthroughRepository>(() => WalkthroughRepository(baseWalkthroughRemoteDataSource: sl(), baseWalkthroughLocalDataSource: sl()));
