@@ -7,7 +7,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/models/country_model.dart';
+import '../../domain/entities/cooking_level.dart';
 import '../../domain/use_cases/get_all_country.dart';
+import '../../domain/use_cases/get_cooking_level_data_usecase.dart';
 import '../../domain/use_cases/login_with_google_usecase.dart';
 import '../../domain/use_cases/search_country_usecase.dart';
 
@@ -19,11 +21,14 @@ class WalkThroughBloc extends Bloc<WalkThroughEvent, WalkThroughState> {
   final LoginWithGoogleUseCase loginWithGoogleUseCase ;
   final GetAllCountryUseCase getAllCountryUseCase ;
   final SearchCountryUseCase searchCountryUseCase ;
-  WalkThroughBloc(this.loginWithGoogleUseCase,this.getAllCountryUseCase, this.searchCountryUseCase) : super(WalkThroughInitial()) {
+  final GetCookingLevelDataUseCase getCookingLevelDataUseCase ;
+  WalkThroughBloc(this.loginWithGoogleUseCase,this.getAllCountryUseCase, this.searchCountryUseCase,this.getCookingLevelDataUseCase) : super(WalkThroughInitial()) {
     on<LoginWithGoogleEvent>(loginWithGoogleEvent);
     on<GoToGetStartedEvent>(goToGetStartedEvent);
     on<GetCountryDataEvent>(getCountryDataEvent);
+    on<SelectCountryEvent>(selectCountryEvent);
     on<SearchCountryEvent>(searchCountryEvent);
+    on<GetCookingLevelDataEvent>(getCookingLevelDataEvent);
   }
   Future<FutureOr<void>> loginWithGoogleEvent(LoginWithGoogleEvent event, Emitter<WalkThroughState> emit) async {
     final UserCredential user =await loginWithGoogleUseCase();
@@ -47,4 +52,16 @@ class WalkThroughBloc extends Bloc<WalkThroughEvent, WalkThroughState> {
     emit(LoadedCountryState(countries:  filterList as List<CountryModel>));
   }
 
+
+  FutureOr<void> selectCountryEvent(SelectCountryEvent event, Emitter<WalkThroughState> emit) {
+    final loadedState = state as LoadedCountryState ;
+    print(event.selectedIndex);
+    emit(loadedState.copyWith(selectedIndex: event.selectedIndex));
+  }
+
+  FutureOr<void> getCookingLevelDataEvent(GetCookingLevelDataEvent event, Emitter<WalkThroughState> emit) async{
+    emit(GetCookingLevelDataLoadingState());
+    final List<CookingLevel> cookingLevelData = await getCookingLevelDataUseCase();
+    emit(GetCookingLevelDataSuccessfulState(cookingLevelData:cookingLevelData ));
+  }
 }

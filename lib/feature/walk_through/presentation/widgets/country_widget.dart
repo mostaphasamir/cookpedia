@@ -5,12 +5,12 @@ import 'package:sizer/sizer.dart';
 import '../../../../core/utils/app_sizer/app_height.dart';
 import '../../../../core/utils/app_sizer/app_width.dart';
 
-Widget countryWidget({required Country country}) => Container(
+Widget countryWidget({required Country country,bool selected = false}) => Container(
       height: AppHeight.h8,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color:Colors.grey.shade300),
+        border: Border.all(color:selected? Colors.red:Colors.grey.shade300),
       ),
       margin: EdgeInsets.only(bottom: AppHeight.h2),
       child: Row(

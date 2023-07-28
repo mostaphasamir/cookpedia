@@ -36,6 +36,7 @@ flutter:
   assets:
     - assets/images/
     - lib/feature/walk_through/data/data_sources/local_data_source/country.json
+    - lib/feature/walk_through/data/data_sources/local_data_source/cooking_level_data.json
 
 
 

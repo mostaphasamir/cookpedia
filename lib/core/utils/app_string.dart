@@ -1,4 +1,4 @@
-class AppStrings{
+class AppStrings {
   static const String noRouteFound = "NO Route Found";
 
   //Intro
@@ -10,8 +10,12 @@ class AppStrings{
   static const String iAlreadyHaveAnAccount = "I Already Have an account";
 
   //choose Country
-static const String whichCountry ='Which country are you from? 🏳️';
-static const String pleaseSelectYourCountry ='please Select your country of origin for a better recommendation';
-static const String continuee ="Continue";
+  static const String whichCountry = 'Which country are you from? 🏳️';
+  static const String pleaseSelectYourCountry = 'please Select your country of origin for a better recommendation';
+  static const String continuee = "Continue";
+
+  //cooking level
+  static const String whatIsYourCookingLevel = "What is Your Cooking Level? 🍳" ;
+  static const String pleaseSelectCookingLevel = "Please Select Your Cooking Level for a better recommendations." ;
 
 }

@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../config/routes/app_routes.dart';
 import '../../../../core/utils/app_string.dart';
 import '../controller/walk_through_bloc.dart';
 import '../widgets/country_widget.dart';
@@ -50,9 +51,6 @@ class SelectCountryScreen extends StatelessWidget {
               ),
               BlocBuilder<WalkThroughBloc, WalkThroughState>(
                 buildWhen: (previous, current) {
-                  if (kDebugMode) {
-                    print(current.runtimeType.toString());
-                  }
                   return previous != current;
                 },
                 builder: (context, state) {
@@ -66,12 +64,11 @@ class SelectCountryScreen extends StatelessWidget {
                         child: ListView.builder(
                           itemBuilder: (context, index) => GestureDetector(
                             onTap: () {
-                              //BlocProvider.of<WalkThroughBloc>(context).add(InitialEvent());
-
-                             // context.read<WalkThroughBloc>().add();
+                              BlocProvider.of<WalkThroughBloc>(context).add(SelectCountryEvent(selectedIndex: index));
                             },
                             child: countryWidget(
                               country: loadedCountryState.countries[index],
+                              selected: loadedCountryState.selectedIndex==index,
                             ),
                           ),
                           itemCount: loadedCountryState.countries.length,
@@ -100,6 +97,9 @@ class SelectCountryScreen extends StatelessWidget {
                 },
               ),
               DefaultButton(
+                onTap: () {
+                  Navigator.pushNamed(context, Routes.cookingLevelScreen);
+                },
                 marginHorizontal: AppWidth.w2,
                 child: const Text(
                   AppStrings.continuee,
